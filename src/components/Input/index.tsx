@@ -12,12 +12,11 @@ import { Container } from './styles';
 
 interface InputProps {
   name: string
-  icon: any
-  rest: InputHTMLAttributes<HTMLInputElement>
+  Icon?: any
 }
 
-const Input = ({ name, icon: Icon, rest }: InputProps) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+const Input = ({ name, Icon, ...rest }: InputProps & InputHTMLAttributes<HTMLInputElement>) => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
