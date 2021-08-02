@@ -14,14 +14,14 @@ export interface IFood {
 
 interface FoodProps {
   food: IFood;
-  available: boolean;
+  available?: boolean;
   handleEditFood: (food: IFood) => void;
   handleDelete: (id: number) => void;
 }
 
 export default function Food({
   food,
-  available,
+  available = false,
   handleEditFood,
   handleDelete
 }: FoodProps) {
