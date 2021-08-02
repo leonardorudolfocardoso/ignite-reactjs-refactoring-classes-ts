@@ -21,7 +21,7 @@ interface FoodProps {
 
 export default function Food({
   food,
-  available = false,
+  available = true,
   handleEditFood,
   handleDelete
 }: FoodProps) {
